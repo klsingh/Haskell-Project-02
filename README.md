@@ -9,7 +9,7 @@ The main file, **Main.hs**, is the entry point of the program and provides a sim
 
 The **Library.hs** module defines the custom type Library, which is a list of Books, and implements the functions to list books, check out a book, and return a book. The library is initialized with a list of books and their details. The listBooks function prints the details of all the books in the library. The checkOutBook function allows the user to check out a book by entering its name, and the returnBook function allows the user to return a book by entering its name. The findBook function is used to find a book in the library by its name, and the checkOutBook' and returnBook' functions are used to update the status of a book in the library.
 
-The **Book.hs** module defines the custom type Book, which has three fields: name, author, and check-out status. The Book type is used in the Library.hs module to represent the books in the library.
+The **Book.hs** module defines the custom type Book, which has three fields: name, author, and check-out status. The Book type is used in the **Library.hs** module to represent the books in the library.
 
 The **Member.hs** module implements the functions to manage members of the library. This module has not been implemented in the above code, but you could add functions to register a member, list members, and update the details of a member.
 
