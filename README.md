@@ -3,7 +3,7 @@
 This is a simple command-line interface (CLI) application for managing a library's inventory. It provides functionalities for managing members, books, and borrowing/returning books. The application is built using Haskell and the state monad to manage the state of the inventory.
 
 Here's the directory structure for the project:
-
+```
 library-management-system/
   app/
     Main.hs
@@ -21,9 +21,10 @@ library-management-system/
   README.md
   Setup.hs
   LMS.cabal
+  ```
 
 Here's a brief description of the different components:
-
+```
 app/Main.hs - contains the main entry point for the program.
 src/Library.hs - contains the implementation of the Library module.
 src/Member.hs - contains the implementation of the Member module.
@@ -37,12 +38,12 @@ LICENSE - contains the license for the project.
 README.md - contains a brief overview of the project.
 Setup.hs is used by Cabal to build the project.
 LMS.cabal - specifies the dependencies and other project information.
-
-Modules
-Main.hs
+```
+## Modules
+### Main.hs
 This module contains the main function that runs the library management system. It imports and uses functions from the other modules to display the main menu and execute user-selected operations. The module defines the InventoryState data type, which represents the state of the library's inventory. The initialState function is defined to provide an initial state for the inventory. The runApp function is defined to execute the main logic of the application.
 
-Member.hs
+### Member.hs
 This module contains the Member data type, which represents a member of the library. It also provides functions for creating, updating, deleting, and displaying member information. The module defines the MemberId type alias for the unique identifier of a member.
 
 Book.hs
