@@ -1,16 +1,62 @@
 # Haskell Project-02
 ## Library Management System
+This is a simple command-line interface (CLI) application for managing a library's inventory. It provides functionalities for managing members, books, and borrowing/returning books. The application is built using Haskell and the state monad to manage the state of the inventory.
 
-The above program is a library management system that is set up as a `Cabal` project with multiple modules. It uses custom types to represent books and members in the library.
+Here's the directory structure for the project:
 
-The `Cabal` file sets up the library management system as an executable project with the main file as `Main.hs` and other modules being `Library.hs`, `Book.hs`, and `Member.hs`. The build dependency is on the base package, with a minimum version of `4.12` and less than version `5`.
+library-management-system/
+  app/
+    Main.hs
+  src/
+    Library.hs
+    Member.hs
+    Book.hs
+    Utils.hs
+  test/
+    Spec.hs
+    LibrarySpec.hs
+    MemberSpec.hs
+    BookSpec.hs
+  LICENSE
+  README.md
+  Setup.hs
+  LMS.cabal
 
-The main file, `Main.hs`, is the entry point of the program and provides a simple `menu-driven` interface for users to interact with the library management system. The menu provides options to list `books`, `check out a book`, `return a book`, `list members`, and `register a member`. The selected option is processed using a case statement and calls the appropriate function from the other modules.
+Here's a brief description of the different components:
 
-The `Library.hs` module defines the custom type `Library`, which is a list of `Books`, and implements the functions to `list books`, `check out a book`, and `return a book`. The library is initialized with a list of books and their details. The `listBooks` function prints the details of all the books in the library. The `checkOutBook` function allows the user to check out a book by entering its name, and the `returnBook` function allows the user to return a book by entering its name. The `findBook` function is used to find a book in the library by its name, and the `checkOutBook` and `returnBook` functions are used to update the status of a book in the library.
+app/Main.hs - contains the main entry point for the program.
+src/Library.hs - contains the implementation of the Library module.
+src/Member.hs - contains the implementation of the Member module.
+src/Book.hs - contains the implementation of the Book module.
+src/Utils.hs - contains utility functions used by other modules.
+test/Spec.hs - sets up the test environment.
+test/LibrarySpec.hs - contains tests for the Library module.
+test/MemberSpec.hs - contains tests for the Member module.
+test/BookSpec.hs - contains tests for the Book module.
+LICENSE - contains the license for the project.
+README.md - contains a brief overview of the project.
+Setup.hs is used by Cabal to build the project.
+LMS.cabal - specifies the dependencies and other project information.
 
-The `Book.hs` module defines the custom type `Book`, which has three fields: `name`, `author`, and `check-out status`. The `Book` type is used in the `Library.hs` module to represent the books in the library.
+Modules
+Main.hs
+This module contains the main function that runs the library management system. It imports and uses functions from the other modules to display the main menu and execute user-selected operations. The module defines the InventoryState data type, which represents the state of the library's inventory. The initialState function is defined to provide an initial state for the inventory. The runApp function is defined to execute the main logic of the application.
 
-The `Member.hs` module implements the functions to manage members of the library. This module has not been implemented in the above code, but one could add functions to `register a member`, `list members`, and `update the details of a member`.
+Member.hs
+This module contains the Member data type, which represents a member of the library. It also provides functions for creating, updating, deleting, and displaying member information. The module defines the MemberId type alias for the unique identifier of a member.
 
-Overall, this program provides a basic implementation of a library management system, with the ability to list books, check out a book, and return a book. 
+Book.hs
+This module contains the Book data type, which represents a book in the library. It also provides functions for creating, updating, deleting, and displaying book information. The module defines the BookId type alias for the unique identifier of a book.
+
+Library.hs
+This module provides functions for managing the inventory of the library. It defines functions for creating members, updating member information, deleting members, creating books, checking out books to members, returning books from members, and printing the inventory.
+
+Utils.hs
+This module provides utility functions for the application, such as functions for reading and writing the inventory to a file, getting user input, and printing formatted output.
+
+Usage
+To run the application, simply execute the following command from the command line:
+
+$ stack run
+
+This will load the library inventory from the inventory.txt file or create a new inventory if the file doesn't exist. The main menu of the application will be displayed, and you can choose the operation you want to perform by entering the corresponding number. Follow the instructions provided by the application to perform the operation.

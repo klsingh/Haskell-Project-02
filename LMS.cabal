@@ -1,0 +1,23 @@
+name:                library-management-system
+version:             0.1.0.0
+license:             MIT
+license-file:        LICENSE
+author:              Kumar Lokesh Singh
+maintainer:          klsingh0912@gmail.com
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable library-management-system
+  main-is:             Main.hs
+  hs-source-dirs:      App
+  other-modules:       Library, Member, Book, Utils
+  build-depends:       base >=4.14 && <4.15
+  default-language:    Haskell2010
+
+test-suite library-management-system-test
+  type:                exitcode-stdio-1.0
+  main-is:             Spec.hs
+  hs-source-dirs:      Test
+  other-modules:       LibrarySpec, MemberSpec, BookSpec
+  build-depends:       base >=4.14 && <4.15, hspec >=2.7 && <2.8
+  default-language:    Haskell2010
