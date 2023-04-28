@@ -47,7 +47,7 @@ LMS.cabal - specifies the dependencies and other project information.
 This module contains the main function that runs the library management system. It imports and uses functions from the other modules to display the main menu and execute user-selected operations. The module defines the `InventoryState` data type, which represents the state of the library's inventory. The `initialState` function is defined to provide an initial state for the inventory. The `runApp` function is defined to execute the main logic of the application.
 
 ### Member.hs
-This module contains the `Member` data type, which represents a member of the library. It also provides functions for creating, updating, deleting, and displaying member information. The module defines the `MemberId` type alias for the unique identifier of a member.
+This module contains the `Member` data type, which represents a member of the library. It also provides functions for `creating`, `updating`, `deleting`, and `displaying member information`. The module defines the `MemberId` type alias for the unique identifier of a member.
 
 ### Book.hs
 This module contains the `Book` data type, which represents a book in the library. It also provides functions for `creating`, `updating`, `deleting`, and `displaying` book information. The module defines the `BookId` type alias for the unique identifier of a book.
