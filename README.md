@@ -6,7 +6,7 @@ To include `Cabal` in the project, we would need to create a `.cabal` file that 
 
 Here's the directory structure for the project:
 ```
-library-management-system/
+library-management-system/ (LMS)
   app/
     Main.hs
   src/
