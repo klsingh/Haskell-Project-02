@@ -2,6 +2,8 @@
 ## Library Management System
 This is a simple command-line interface (CLI) application for managing a library's inventory. It provides functionalities for `managing members`, `books`, and `borrowing/returning books`. The application is built using `Haskell` and the `state monad` to manage the state of the inventory.
 
+To include `Cabal` in the project, we would need to create a `.cabal` file that specifies the dependencies and other project information. Here we have created `LMS.cabal` file for the same purpose.
+
 Here's the directory structure for the project:
 ```
 library-management-system/
