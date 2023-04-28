@@ -38,7 +38,7 @@ test/MemberSpec.hs - contains tests for the Member module.
 test/BookSpec.hs - contains tests for the Book module.
 LICENSE - contains the license for the project.
 README.md - contains a brief overview of the project.
-Setup.hs is used by Cabal to build the project.
+Setup.hs - is used by Cabal to build the project.
 LMS.cabal - specifies the dependencies and other project information.
 ```
 ## Modules
