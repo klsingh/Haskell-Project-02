@@ -1,5 +1,5 @@
 # Haskell Project-02
-## Library Management System - For Cardano Developer Program
+## Library Management System
 
 The above program is a library management system that is set up as a `Cabal` project with multiple modules. It uses custom types to represent books and members in the library.
 
