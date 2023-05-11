@@ -6,24 +6,27 @@ To include `Cabal` in the project, we would need to create a `.cabal` file that 
 
 Here's the directory structure for the project:
 ```
-library-management-system/ (LMS)
-  app/
-    Main.hs
-  src/
-    Library.hs
-    Member.hs
-    Book.hs
-    Utils.hs
-  test/
-    Spec.hs
-    LibrarySpec.hs
-    MemberSpec.hs
-    BookSpec.hs
-  LICENSE
-  README.md
-  Setup.hs
-  LMS.cabal
-  ```
+
+library-management-system
+├── app
+│   └── Setup.hs
+├── cabal
+│   └── library.cabal
+├── src
+│   ├── Data
+│   │   ├── Book.hs
+│   │   ├── Library.hs
+│   │   └── Member.hs
+│   ├── Main.hs
+│   └── Utils.hs
+└── test
+│   └── Test.hs
+└── stack.yaml
+└── LICENSE
+└── README.md
+
+
+```
 
 Here's a brief description of the different components:
 ```
@@ -32,14 +35,11 @@ src/Library.hs - contains the implementation of the Library module.
 src/Member.hs - contains the implementation of the Member module.
 src/Book.hs - contains the implementation of the Book module.
 src/Utils.hs - contains utility functions used by other modules.
-test/Spec.hs - sets up the test environment.
-test/LibrarySpec.hs - contains tests for the Library module.
-test/MemberSpec.hs - contains tests for the Member module.
-test/BookSpec.hs - contains tests for the Book module.
+test/Test.hs - sets up the test environment.
 LICENSE - contains the license for the project.
 README.md - contains a brief overview of the project.
 Setup.hs - is used by Cabal to build the project.
-LMS.cabal - specifies the dependencies and other project information.
+Library.cabal - specifies the dependencies and other project information.
 ```
 ## Modules
 
