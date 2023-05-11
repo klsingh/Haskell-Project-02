@@ -30,7 +30,8 @@ library-management-system
 
 Here's a brief description of the different components:
 ```
-app/Main.hs - contains the main entry point for the program.
+app/Setup.hs - is used by Cabal to build the project.
+src/Main.hs - contains the main entry point for the program.
 src/Library.hs - contains the implementation of the Library module.
 src/Member.hs - contains the implementation of the Member module.
 src/Book.hs - contains the implementation of the Book module.
@@ -38,7 +39,6 @@ src/Utils.hs - contains utility functions used by other modules.
 test/Test.hs - sets up the test environment.
 LICENSE - contains the license for the project.
 README.md - contains a brief overview of the project.
-Setup.hs - is used by Cabal to build the project.
 Library.cabal - specifies the dependencies and other project information.
 ```
 ## Modules
